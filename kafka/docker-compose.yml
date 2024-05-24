@@ -1,0 +1,141 @@
+version: '3.8'
+
+services:
+  zookeeper1:
+    image: 'bitnami/zookeeper:latest'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+      - ZOO_SERVER_ID=1
+      - ZOO_SERVERS=zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+    ports:
+      - '2181:2181'
+    networks:
+      - kafka_network
+    volumes:
+      - ./zookeeper1/persistence:/bitnami/zookeeper
+
+  zookeeper2:
+    image: 'bitnami/zookeeper:latest'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+      - ZOO_SERVER_ID=2
+      - ZOO_SERVERS=zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+    ports:
+      - '2182:2181'
+    networks:
+      - kafka_network
+    volumes:
+      - ./zookeeper2/persistence:/bitnami/zookeeper
+
+  zookeeper3:
+    image: 'bitnami/zookeeper:latest'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+      - ZOO_SERVER_ID=3
+      - ZOO_SERVERS=zookeeper1:2888:3888,zookeeper2:2888:3888,zookeeper3:2888:3888
+    ports:
+      - '2183:2181'
+    networks:
+      - kafka_network
+    volumes:
+      - ./zookeeper3/persistence:/bitnami/zookeeper
+
+  kafka1:
+    image: 'bitnami/kafka:latest'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka1:9092
+      - KAFKA_LOG_RETENTION_MS=86400000  # keep 24 hr
+      - KAFKA_LOG_RETENTION_BYTES=1073741824  # keep max 1 gb
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_NUM_PARTITIONS=2
+    ports:
+      - '9092:9092'
+    depends_on:
+      - zookeeper1
+      - zookeeper2
+      - zookeeper3
+    networks:
+      - kafka_network
+    volumes:
+      - ./kafka1_data/persistence:/bitnami/kafka
+
+  kafka2:
+    image: 'bitnami/kafka:latest'
+    environment:
+      - KAFKA_BROKER_ID=2
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9093
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka2:9093
+      - KAFKA_LOG_RETENTION_MS=86400000  # keep 24 hr
+      - KAFKA_LOG_RETENTION_BYTES=1073741824  # keep max 1 gb
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_NUM_PARTITIONS=2
+    ports:
+      - '9093:9093'
+    depends_on:
+      - zookeeper1
+      - zookeeper2
+      - zookeeper3
+    networks:
+      - kafka_network
+    volumes:
+      - ./kafka2_data/persistence:/bitnami/kafka
+
+  kafka3:
+    image: 'bitnami/kafka:latest'
+    environment:
+      - KAFKA_BROKER_ID=3
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9094
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka3:9094
+      - KAFKA_LOG_RETENTION_MS=86400000  # keep 24 hr
+      - KAFKA_LOG_RETENTION_BYTES=1073741824  # keep max 1 gb
+      - KAFKA_DEFAULT_REPLICATION_FACTOR=3
+      - KAFKA_MIN_INSYNC_REPLICAS=2
+      - KAFKA_NUM_PARTITIONS=2
+    ports:
+      - '9094:9094'
+    depends_on:
+      - zookeeper1
+      - zookeeper2
+      - zookeeper3
+    networks:
+      - kafka_network
+    volumes:
+      - ./kafka3_data/persistence:/bitnami/kafka
+
+  telegraf:
+    image: telegraf:latest
+    volumes:
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+    networks:
+      - kafka_network
+
+  kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    environment:
+      KAFKA_BROKERCONNECT: kafka1:9092,kafka2:9093,kafka3:9094
+    ports:
+      - "9000:9000"
+    networks:
+      - kafka_network
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+
+networks:
+  kafka_network:
+    driver: bridge
