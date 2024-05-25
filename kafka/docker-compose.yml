@@ -12,7 +12,7 @@ services:
     networks:
       - kafka_network
     volumes:
-      - ./zookeeper1/persistence:/bitnami/zookeeper
+      - ./data/zookeeper1/persistence:/bitnami/zookeeper
 
   zookeeper2:
     image: 'bitnami/zookeeper:latest'
@@ -25,7 +25,7 @@ services:
     networks:
       - kafka_network
     volumes:
-      - ./zookeeper2/persistence:/bitnami/zookeeper
+      - ./data/zookeeper2/persistence:/bitnami/zookeeper
 
   zookeeper3:
     image: 'bitnami/zookeeper:latest'
@@ -38,7 +38,7 @@ services:
     networks:
       - kafka_network
     volumes:
-      - ./zookeeper3/persistence:/bitnami/zookeeper
+      - ./data/zookeeper3/persistence:/bitnami/zookeeper
 
   kafka1:
     image: 'bitnami/kafka:latest'
@@ -46,8 +46,9 @@ services:
       - KAFKA_BROKER_ID=1
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
-      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka1:9092
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092,CONTROLLER://:29092
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka1:9092,CONTROLLER://localhost:29092
       - KAFKA_LOG_RETENTION_MS=86400000  # keep 24 hr
       - KAFKA_LOG_RETENTION_BYTES=1073741824  # keep max 1 gb
       - KAFKA_DEFAULT_REPLICATION_FACTOR=3
@@ -55,6 +56,7 @@ services:
       - KAFKA_NUM_PARTITIONS=2
     ports:
       - '9092:9092'
+      - '29092:29092'
     depends_on:
       - zookeeper1
       - zookeeper2
@@ -62,7 +64,7 @@ services:
     networks:
       - kafka_network
     volumes:
-      - ./kafka1_data/persistence:/bitnami/kafka
+      - ./data/kafka1_data/persistence:/bitnami/kafka
 
   kafka2:
     image: 'bitnami/kafka:latest'
@@ -70,14 +72,16 @@ services:
       - KAFKA_BROKER_ID=2
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
-      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9093
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka2:9093
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9093,CONTROLLER://:29093
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka2:9093,CONTROLLER://localhost:29093
       - KAFKA_LOG_RETENTION_MS=86400000  # keep 24 hr
       - KAFKA_LOG_RETENTION_BYTES=1073741824  # keep max 1 gb
       - KAFKA_DEFAULT_REPLICATION_FACTOR=3
       - KAFKA_MIN_INSYNC_REPLICAS=2
       - KAFKA_NUM_PARTITIONS=2
     ports:
+      - '29093:29093'
       - '9093:9093'
     depends_on:
       - zookeeper1
@@ -86,7 +90,7 @@ services:
     networks:
       - kafka_network
     volumes:
-      - ./kafka2_data/persistence:/bitnami/kafka
+      - ./data/kafka2_data/persistence:/bitnami/kafka
 
   kafka3:
     image: 'bitnami/kafka:latest'
@@ -94,14 +98,16 @@ services:
       - KAFKA_BROKER_ID=3
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper1:2181,zookeeper2:2181,zookeeper3:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
-      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9094
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka3:9094
+      - KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9094,CONTROLLER://:29094
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka3:9094,CONTROLLER://localhost:29094
       - KAFKA_LOG_RETENTION_MS=86400000  # keep 24 hr
       - KAFKA_LOG_RETENTION_BYTES=1073741824  # keep max 1 gb
       - KAFKA_DEFAULT_REPLICATION_FACTOR=3
       - KAFKA_MIN_INSYNC_REPLICAS=2
       - KAFKA_NUM_PARTITIONS=2
     ports:
+      - '29094:29094'
       - '9094:9094'
     depends_on:
       - zookeeper1
@@ -110,7 +116,7 @@ services:
     networks:
       - kafka_network
     volumes:
-      - ./kafka3_data/persistence:/bitnami/kafka
+      - ./data/kafka3_data/persistence:/bitnami/kafka
 
   telegraf:
     image: telegraf:latest

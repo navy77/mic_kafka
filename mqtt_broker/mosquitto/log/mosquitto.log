@@ -3760,3 +3760,193 @@ To fix this, use `chmod 0700 /mosquitto/data//mosquitto.db.new`.
 1716543210: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1716543250: mosquitto version 2.0.18 terminating
 1716543250: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716611799: mosquitto version 2.0.18 starting
+1716611799: Config loaded from /mosquitto/config/mosquitto.conf.
+1716611799: Opening ipv4 listen socket on port 1883.
+1716611799: mosquitto version 2.0.18 running
+1716611816: New connection from 172.18.0.1:55068 on port 1883.
+1716611816: New client connected from 172.18.0.1:55068 as pub1 (p2, c1, k60).
+1716611821: Client pub1 closed its connection.
+1716611825: New connection from 172.18.0.1:53660 on port 1883.
+1716611825: New client connected from 172.18.0.1:53660 as pub1 (p2, c1, k60).
+1716611831: New connection from 172.18.0.1:50710 on port 1883.
+1716611831: New client connected from 172.18.0.1:50710 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716611845: Client pub1 disconnected.
+1716611863: Client mqtt-explorer-12dd2785 disconnected.
+1716611864: New connection from 172.18.0.1:41052 on port 1883.
+1716611864: New client connected from 172.18.0.1:41052 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716611969: New connection from 172.18.0.1:42728 on port 1883.
+1716611969: New client connected from 172.18.0.1:42728 as Telegraf-Consumer-oGrAc (p2, c1, k60).
+1716611996: New connection from 172.18.0.1:33158 on port 1883.
+1716611996: New client connected from 172.18.0.1:33158 as pub1 (p2, c1, k60).
+1716612017: Client pub1 disconnected.
+1716613599: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716613844: Client Telegraf-Consumer-oGrAc disconnected.
+1716614390: New connection from 172.18.0.1:39050 on port 1883.
+1716614390: New client connected from 172.18.0.1:39050 as Telegraf-Consumer-HVQ71 (p2, c1, k60).
+1716614435: Client Telegraf-Consumer-HVQ71 disconnected.
+1716614499: Client mqtt-explorer-12dd2785 disconnected.
+1716614500: New connection from 172.18.0.1:56200 on port 1883.
+1716614500: New client connected from 172.18.0.1:56200 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716614515: New connection from 172.18.0.1:35512 on port 1883.
+1716614515: New client connected from 172.18.0.1:35512 as Telegraf-Consumer-DvKWJ (p2, c1, k60).
+1716614543: Client Telegraf-Consumer-DvKWJ disconnected.
+1716614620: New connection from 172.18.0.1:53062 on port 1883.
+1716614620: New client connected from 172.18.0.1:53062 as Telegraf-Consumer-rl2oG (p2, c1, k60).
+1716614649: Client Telegraf-Consumer-rl2oG disconnected.
+1716614756: New connection from 172.18.0.1:60294 on port 1883.
+1716614756: New client connected from 172.18.0.1:60294 as pub1 (p2, c1, k60).
+1716614776: Client pub1 disconnected.
+1716614807: Client mqtt-explorer-12dd2785 disconnected.
+1716614809: New connection from 172.18.0.1:46786 on port 1883.
+1716614809: New client connected from 172.18.0.1:46786 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716615400: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716617201: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716619002: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716619289: New connection from 172.18.0.1:40650 on port 1883.
+1716619289: New client connected from 172.18.0.1:40650 as Telegraf-Consumer-5SCVx (p2, c1, k60).
+1716619322: Client Telegraf-Consumer-5SCVx disconnected.
+1716619436: New connection from 172.18.0.1:43206 on port 1883.
+1716619436: New client connected from 172.18.0.1:43206 as Telegraf-Consumer-GfM8I (p2, c1, k60).
+1716619438: New connection from 172.18.0.1:54274 on port 1883.
+1716619438: New client connected from 172.18.0.1:54274 as pub1 (p2, c1, k60).
+1716619459: Client pub1 disconnected.
+1716619626: Client mqtt-explorer-12dd2785 disconnected.
+1716619627: New connection from 172.18.0.1:38258 on port 1883.
+1716619627: New client connected from 172.18.0.1:38258 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716619677: New connection from 172.18.0.1:41710 on port 1883.
+1716619677: New client connected from 172.18.0.1:41710 as pub1 (p2, c1, k60).
+1716619697: Client pub1 disconnected.
+1716619697: New connection from 172.18.0.1:50278 on port 1883.
+1716619697: New client connected from 172.18.0.1:50278 as pub1 (p2, c1, k60).
+1716619718: Client pub1 disconnected.
+1716619718: New connection from 172.18.0.1:36368 on port 1883.
+1716619718: New client connected from 172.18.0.1:36368 as pub1 (p2, c1, k60).
+1716619722: Client pub1 disconnected.
+1716619722: New connection from 172.18.0.1:36372 on port 1883.
+1716619722: New client connected from 172.18.0.1:36372 as pub1 (p2, c1, k60).
+1716619727: Client pub1 disconnected.
+1716619727: New connection from 172.18.0.1:51868 on port 1883.
+1716619727: New client connected from 172.18.0.1:51868 as pub1 (p2, c1, k60).
+1716619727: Client pub1 disconnected.
+1716619728: New connection from 172.18.0.1:51872 on port 1883.
+1716619728: New client connected from 172.18.0.1:51872 as pub1 (p2, c1, k60).
+1716619728: Client pub1 disconnected.
+1716619728: New connection from 172.18.0.1:51888 on port 1883.
+1716619728: New client connected from 172.18.0.1:51888 as pub1 (p2, c1, k60).
+1716619728: Client pub1 disconnected.
+1716619733: Client mqtt-explorer-12dd2785 disconnected.
+1716619734: New connection from 172.18.0.1:51896 on port 1883.
+1716619734: New client connected from 172.18.0.1:51896 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716620126: Client Telegraf-Consumer-GfM8I disconnected.
+1716620803: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716620921: New connection from 172.18.0.1:47726 on port 1883.
+1716620921: New client connected from 172.18.0.1:47726 as pub1 (p2, c1, k60).
+1716620921: Client pub1 disconnected.
+1716620974: New connection from 172.18.0.1:55312 on port 1883.
+1716620974: New client connected from 172.18.0.1:55312 as pub1 (p2, c1, k60).
+1716620994: Client pub1 disconnected.
+1716621006: New connection from 172.18.0.1:56150 on port 1883.
+1716621006: New client connected from 172.18.0.1:56150 as pub1 (p2, c1, k60).
+1716621006: Client pub1 disconnected.
+1716621017: New connection from 172.18.0.1:36786 on port 1883.
+1716621017: New client connected from 172.18.0.1:36786 as pub1 (p2, c1, k60).
+1716621017: Client pub1 disconnected.
+1716621090: Client mqtt-explorer-12dd2785 disconnected.
+1716621092: New connection from 172.18.0.1:53284 on port 1883.
+1716621092: New client connected from 172.18.0.1:53284 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716621095: New connection from 172.18.0.1:53288 on port 1883.
+1716621095: New client connected from 172.18.0.1:53288 as pub1 (p2, c1, k60).
+1716621115: Client pub1 disconnected.
+1716621127: New connection from 172.18.0.1:42356 on port 1883.
+1716621127: New client connected from 172.18.0.1:42356 as pub1 (p2, c1, k60).
+1716621147: Client pub1 disconnected.
+1716621318: Client mqtt-explorer-12dd2785 disconnected.
+1716622604: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716622921: New connection from 172.18.0.1:45590 on port 1883.
+1716622921: New client connected from 172.18.0.1:45590 as Telegraf-Consumer-qxw4K (p2, c1, k60).
+1716622969: New connection from 172.18.0.1:54288 on port 1883.
+1716622969: New client connected from 172.18.0.1:54288 as pub1 (p2, c1, k60).
+1716622979: Client pub1 disconnected.
+1716623106: Client Telegraf-Consumer-qxw4K disconnected.
+1716623224: New connection from 172.18.0.1:56076 on port 1883.
+1716623224: New client connected from 172.18.0.1:56076 as Telegraf-Consumer-jbw5m (p2, c1, k60).
+1716623234: New connection from 172.18.0.1:40424 on port 1883.
+1716623234: New client connected from 172.18.0.1:40424 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716623247: New connection from 172.18.0.1:53892 on port 1883.
+1716623247: New client connected from 172.18.0.1:53892 as pub1 (p2, c1, k60).
+1716623257: Client pub1 disconnected.
+1716623379: New connection from 172.18.0.1:50228 on port 1883.
+1716623379: New client connected from 172.18.0.1:50228 as pub1 (p2, c1, k60).
+1716623380: Client pub1 disconnected.
+1716623727: Client Telegraf-Consumer-jbw5m disconnected.
+1716623736: Client mqtt-explorer-12dd2785 disconnected.
+1716623737: New connection from 172.18.0.1:35310 on port 1883.
+1716623737: New client connected from 172.18.0.1:35310 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716624028: New connection from 172.18.0.1:44342 on port 1883.
+1716624028: New client connected from 172.18.0.1:44342 as Telegraf-Consumer-iilFl (p2, c1, k60).
+1716624034: New connection from 172.18.0.1:44358 on port 1883.
+1716624034: New client connected from 172.18.0.1:44358 as pub1 (p2, c1, k60).
+1716624042: Client pub1 disconnected.
+1716624173: Client Telegraf-Consumer-iilFl disconnected.
+1716624269: New connection from 172.18.0.1:45324 on port 1883.
+1716624269: New client connected from 172.18.0.1:45324 as Telegraf-Consumer-JYyCk (p2, c1, k60).
+1716624355: Client mqtt-explorer-12dd2785 disconnected.
+1716624356: New connection from 172.18.0.1:50500 on port 1883.
+1716624356: New client connected from 172.18.0.1:50500 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716624369: New connection from 172.18.0.1:44638 on port 1883.
+1716624369: New client connected from 172.18.0.1:44638 as pub1 (p2, c1, k60).
+1716624377: Client pub1 disconnected.
+1716624404: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716624512: Client Telegraf-Consumer-JYyCk disconnected.
+1716626205: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716626303: Client mqtt-explorer-12dd2785 disconnected.
+1716626305: New connection from 172.18.0.1:36730 on port 1883.
+1716626305: New client connected from 172.18.0.1:36730 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716626331: New connection from 172.18.0.1:54592 on port 1883.
+1716626331: New client connected from 172.18.0.1:54592 as pub1 (p2, c1, k60).
+1716626332: Client pub1 disconnected.
+1716626387: New connection from 172.18.0.1:39176 on port 1883.
+1716626387: New client connected from 172.18.0.1:39176 as pub1 (p2, c1, k60).
+1716626388: Client pub1 disconnected.
+1716626426: New connection from 172.18.0.1:36162 on port 1883.
+1716626426: New client connected from 172.18.0.1:36162 as pub1 (p2, c1, k60).
+1716626429: Client pub1 disconnected.
+1716626452: Client mqtt-explorer-12dd2785 disconnected.
+1716626499: New connection from 172.18.0.1:48686 on port 1883.
+1716626499: New client connected from 172.18.0.1:48686 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716626646: New connection from 172.18.0.1:38720 on port 1883.
+1716626646: New client connected from 172.18.0.1:38720 as Telegraf-Consumer-38ful (p2, c1, k60).
+1716626718: New connection from 172.18.0.1:54206 on port 1883.
+1716626718: New client connected from 172.18.0.1:54206 as pub1 (p2, c1, k60).
+1716626719: Client pub1 disconnected.
+1716628006: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716628173: New connection from 172.18.0.1:44998 on port 1883.
+1716628173: New client connected from 172.18.0.1:44998 as pub1 (p2, c1, k60).
+1716628176: Client pub1 disconnected.
+1716628313: Client Telegraf-Consumer-38ful disconnected.
+1716628362: New connection from 172.18.0.1:51096 on port 1883.
+1716628362: New client connected from 172.18.0.1:51096 as Telegraf-Consumer-0C1Or (p2, c1, k60).
+1716628621: Client Telegraf-Consumer-0C1Or disconnected.
+1716628662: New connection from 172.18.0.1:49004 on port 1883.
+1716628662: New client connected from 172.18.0.1:49004 as Telegraf-Consumer-7mL2p (p2, c1, k60).
+1716629039: Client mqtt-explorer-12dd2785 disconnected.
+1716629041: New connection from 172.18.0.1:60094 on port 1883.
+1716629041: New client connected from 172.18.0.1:60094 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716629051: New connection from 172.18.0.1:48452 on port 1883.
+1716629051: New client connected from 172.18.0.1:48452 as pub1 (p2, c1, k60).
+1716629054: Client pub1 disconnected.
+1716629147: New connection from 172.18.0.1:39498 on port 1883.
+1716629147: New client connected from 172.18.0.1:39498 as pub1 (p2, c1, k60).
+1716629150: Client pub1 disconnected.
+1716629359: Client Telegraf-Consumer-7mL2p disconnected.
+1716629807: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716630668: Client mqtt-explorer-12dd2785 disconnected.
+1716630669: New connection from 172.18.0.1:55540 on port 1883.
+1716630669: New client connected from 172.18.0.1:55540 as mqtt-explorer-12dd2785 (p2, c1, k60).
+1716631116: New connection from 172.18.0.1:42628 on port 1883.
+1716631116: New client connected from 172.18.0.1:42628 as Telegraf-Consumer-eYNzC (p2, c1, k60).
+1716631193: New connection from 172.18.0.1:58734 on port 1883.
+1716631193: New client connected from 172.18.0.1:58734 as pub1 (p2, c1, k60).
+1716631194: Client pub1 disconnected.
+1716631302: Client Telegraf-Consumer-eYNzC disconnected.
