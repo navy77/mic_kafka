@@ -3950,3 +3950,62 @@ To fix this, use `chmod 0700 /mosquitto/data//mosquitto.db.new`.
 1716631193: New client connected from 172.18.0.1:58734 as pub1 (p2, c1, k60).
 1716631194: Client pub1 disconnected.
 1716631302: Client Telegraf-Consumer-eYNzC disconnected.
+1716642825: mosquitto version 2.0.18 starting
+1716642825: Config loaded from /mosquitto/config/mosquitto.conf.
+1716642825: Opening ipv4 listen socket on port 1883.
+1716642825: mosquitto version 2.0.18 running
+1716643134: New connection from 172.19.0.1:35598 on port 1883.
+1716643134: New client connected from 172.19.0.1:35598 as Telegraf-Consumer-FL4O0 (p2, c1, k60).
+1716643175: New connection from 172.19.0.1:46940 on port 1883.
+1716643175: New client connected from 172.19.0.1:46940 as pub1 (p2, c1, k60).
+1716643185: New connection from 172.19.0.1:47250 on port 1883.
+1716643185: New client connected from 172.19.0.1:47250 as mqtt-explorer (p2, c1, k60).
+1716643190: Client pub1 disconnected.
+1716643885: Client Telegraf-Consumer-FL4O0 disconnected.
+1716644625: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716644821: Client mqtt-explorer disconnected.
+1716644822: New connection from 172.19.0.1:46412 on port 1883.
+1716644822: New client connected from 172.19.0.1:46412 as mqtt-explorer (p2, c1, k60).
+1716644830: New connection from 172.19.0.1:47524 on port 1883.
+1716644830: New client connected from 172.19.0.1:47524 as pub1 (p2, c1, k60).
+1716644842: New connection from 172.19.0.1:53892 on port 1883.
+1716644842: New client connected from 172.19.0.1:53892 as Telegraf-Consumer-g53vU (p2, c1, k60).
+1716644845: Client pub1 disconnected.
+1716644967: Client Telegraf-Consumer-g53vU disconnected.
+1716652204: mosquitto version 2.0.18 starting
+1716652204: Config loaded from /mosquitto/config/mosquitto.conf.
+1716652204: Opening ipv4 listen socket on port 1883.
+1716652204: mosquitto version 2.0.18 running
+1716654004: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716655805: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716657606: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716659407: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716661208: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716663009: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716664810: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716666611: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716699188: mosquitto version 2.0.18 starting
+1716699188: Config loaded from /mosquitto/config/mosquitto.conf.
+1716699188: Opening ipv4 listen socket on port 1883.
+1716699188: mosquitto version 2.0.18 running
+1716700988: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716702789: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716713320: mosquitto version 2.0.18 starting
+1716713320: Config loaded from /mosquitto/config/mosquitto.conf.
+1716713320: Opening ipv4 listen socket on port 1883.
+1716713320: mosquitto version 2.0.18 running
+1716715120: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716716921: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716718722: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716720523: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716722324: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716728073: mosquitto version 2.0.18 starting
+1716728073: Config loaded from /mosquitto/config/mosquitto.conf.
+1716728073: Opening ipv4 listen socket on port 1883.
+1716728073: mosquitto version 2.0.18 running
+1716729873: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716731674: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716732465: New connection from 172.19.0.1:43988 on port 1883.
+1716732465: New client connected from 172.19.0.1:43988 as mqtt-explorer (p2, c1, k60).
+1716732637: mosquitto version 2.0.18 terminating
+1716732637: Saving in-memory database to /mosquitto/data//mosquitto.db.

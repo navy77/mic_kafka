@@ -3,7 +3,7 @@ import time
 import json
 import random
 
-broker_address = "192.168.0.160" 
+broker_address = "192.168.1.30" 
 client = mqtt.Client(callback_api_version=2,client_id="pub1")
 client.connect(broker_address)
 data_topic = "data/mic/test/a"
@@ -46,9 +46,9 @@ def publish_messages_alarm(topic_num,delay_time,pub_loop,init):
 
 if __name__ == "__main__":
     try:
-        # publish_messages_data(50,0.5,10,2,51)
-        publish_messages_status(50,0.5,2,1)
-        # publish_messages_alarm(80,0.5,2,21)
+        publish_messages_data(50,1,10,5,1)
+        publish_messages_status(50,1,5,1)
+        publish_messages_alarm(80,1,5,1)
     finally:
         client.disconnect()
         print("Disconnected from MQTT broker.")
